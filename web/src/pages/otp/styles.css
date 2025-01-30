@@ -1,0 +1,187 @@
+/* Main container */
+.otp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/poondu-oorgai-thayir-saadham-1655200926_9f48b62b6764656c8537.webp') center/cover no-repeat;
+
+    perspective: 1000px; /* Adding perspective for 3D effect */
+  }
+  
+  /* Card wrapper */
+  .otp-card {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d; /* Enable 3D transforms */
+    transition: transform 1s; /* Smooth flip animation */
+  }
+  
+  /* Flip animation */
+  .otp-card.flipped {
+    transform: rotateY(180deg); /* Flip the card */
+  }
+  
+  /* Shared card side styles */
+  .otp-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the backside when flipping */
+    border-radius: 12px;
+    background: linear-gradient(
+      145deg, 
+      rgba(0, 0, 0, 0.7) 0%, 
+      rgba(0, 0, 0, 0.8) 50%, 
+      rgba(0, 0, 0, 0.6) 100%
+    ); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(255, 255, 255, 0.1) inset; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    position: relative; 
+    overflow: hidden;
+}
+
+/* Glossy highlight at the top for reflection */
+.otp-side::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: rgba(255, 255, 255, 0.2); /* Glossy highlight */
+    border-radius: 12px 12px 0 0;
+    transform: skewY(-15deg);
+    opacity: 0.6;
+    pointer-events: none; /* Prevent it from interacting with the UI */
+}
+
+/* Optional if you want a glossy stripe across the card */
+.otp-side::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 15%;
+    background: rgba(255, 255, 255, 0.1); /* Glossy stripe at the bottom */
+    border-radius: 0 0 12px 12px;
+    opacity: 0.5;
+    transform: rotate(-5deg);
+    pointer-events: none;
+}
+  
+  /* Front side */
+  .otp-front {
+    transform: rotateY(0deg);
+  }
+  
+  /* Back side */
+  .otp-back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Form styles */
+  .otp-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .otp-header h2 {
+    font-size: 24px;
+    color: #fefefe;
+  }
+  
+  .otp-header p {
+    font-size: 16px;
+    color: #fefefe;
+  }
+  
+  .otp-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .otp-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #3498db;
+    outline: none;
+  }
+  
+  .otp-submit-btn {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .otp-submit-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .footer-links {
+    text-align: center;
+  }
+  
+  .resend-otp {
+    font-size: 14px;
+    color: #3498db;
+    text-decoration: none;
+    animation: pulse 1.5s infinite;
+  }
+
+  .otp-input-wrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .otp-input-box {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 4px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .otp-header h2 {
+    /* font-family: 'Bebas Neue', sans-serif; */
+    font-size: 24px;
+    font-weight: 600;
+    /* color: #333; */
+  }
+  
+  .otp-submit-btn {
+    /* font-family: 'Bebas Neue', sans-serif; */
+    font-weight: 600;
+    font-size: 16px;
+  }

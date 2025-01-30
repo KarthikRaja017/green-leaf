@@ -1,0 +1,92 @@
+/* Restaurant Details Page Container */
+.restaurant-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/poondu-oorgai-thayir-saadham-1655200926_9f48b62b6764656c8537.webp') center/cover no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+}
+
+/* Restaurant Card */
+.restaurant-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: linear-gradient(
+      145deg, 
+      rgba(0, 0, 0, 0.7) 0%, 
+      rgba(0, 0, 0, 0.8) 50%, 
+      rgba(0, 0, 0, 0.6) 100%
+    ); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(255, 255, 255, 0.1) inset; 
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Header */
+.restaurant-header {
+    margin-bottom: 20px;
+}
+
+.restaurant-header h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.restaurant-header p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+/* Form Styles */
+.restaurant-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Field Styles */
+.form-input {
+    padding: 7px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 7px;
+}
+
+/* Button Styles */
+.generate-bill-btn {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.generate-bill-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Styling for Select Input */
+.ant-select-selector {
+    height: 40px !important;
+    border-radius: 8px !important;
+    border: 1px solid #ddd !important;
+}
+
+/* Label Color for Ant Design */
+.restaurant-form .ant-form-item-label > label {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+
